@@ -18,7 +18,6 @@ public class Example {
 
 	public static void main(String[] args) {
 		B b = new B(11);
-		
 		//A클래스의 첫번째 실행문이 실행이되고 파라미터로 x가 전달되고 B클래스에서 실행이됨
 		
 	}
