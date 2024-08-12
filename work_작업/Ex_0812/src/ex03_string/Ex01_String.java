@@ -45,5 +45,9 @@ public class Ex01_String {
 		//특정문자를 포함하고 있는지 판별
 		//contains()
 		System.out.println(str.contains("a"));
+		
+		//문자열의 길이가 0인경우 true를 반환
+		//isEmpty()
+		System.out.println(str.isEmpty());
 	}
 }
