@@ -41,5 +41,9 @@ public class Ex01_String {
 		
 		//String replace(변경할 문자, 변경 문자)
 		System.out.println(str.replace("Kim", "Jang"));
+		
+		//특정문자를 포함하고 있는지 판별
+		//contains()
+		System.out.println(str.contains("a"));
 	}
 }
