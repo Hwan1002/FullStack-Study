@@ -40,6 +40,7 @@ public class QuizThread extends Thread{
 		Scanner sc = new Scanner(System.in);
 		int x = rnd.nextInt(101);
 		int y = rnd.nextInt(101);
+		System.out.print(x+"+"+y+"= ");
 		int ans = sc.nextInt();
 		for(int i=0; i<=5; i++) {
 			
