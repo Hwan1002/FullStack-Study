@@ -31,16 +31,26 @@ qt.startGame();
 정답!!
 결과 : 24초...*/
 public class QuizThread extends Thread{
-	public QuizThread() {
-		start();
-	}
 	
 	public void startGame() {
 		Random rnd = new Random();
 		Scanner sc = new Scanner(System.in);
 		int x = rnd.nextInt(101);
 		int y = rnd.nextInt(101);
-		System.out.print(x+"+"+y+"= ");
+		int ans = sc.nextInt();
+		System.out.print(x + "+" + y + "= " + ans);
+		
+		while(true){
+		for(int i=0; i<5; i++){
+			if((x+y).equals(ans)){
+				System.out.println("정답!");
+				continue;
+			}else if(ans != (x+y)){
+				System.out.println("오답!");
+				break;
+			}
+		}
+		}sw
 		int ans = sc.nextInt();
 		for(int i=0; i<=5; i++) {
 			
