@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        function clicked(){
+            alert('함수발동');
+        }
+       function numbering(n){
+            for(let i=1;i<n;i++){
+                console.log(i);
+            }
+       }
+
+       //자바스크립트 코드는 HTML요소를 대상으로 적용하는 경우가 많다.
+       //자바스크립트에 어떤 HTML요소를 대상으로 할건지 정해야 한다.
+       function red(){
+            const btn = document.querySelector('#btn');
+            btn.style.backgroundColor = "red";
+
+            const inpAll = document.querySelectorAll('input');
+            for(let i=0; i<inpAll.length; i++){
+                inpAll[i].style.backgroundColor="red";
+            }
+            
+
+       }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click!" onclick="alert('안녕하세요')">
+    <hr>
+    <p onclick="alert('눌렀네요!')">눌러보세요!</p>
+    <hr>
+    <input type="button" value="버튼" onclick = "numbering(5)">
+        
+    <hr>
+    <input type="button" value="테스트" onclick = "clicked()">
+    <hr>
+    <!--버튼을 클릭하면 버튼의 색을 빨간색으로 바꾸기-->
+    <input id="btn" type="button" class="btn" value="색바꾸기" onclick="red()">
+</body>
+</html>
