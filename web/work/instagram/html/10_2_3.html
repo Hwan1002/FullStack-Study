@@ -1,0 +1,27 @@
+<style>
+    @media(max-width : 600px){ /*600px 까지*/
+        p{
+            background-color: pink;
+        }
+        .mobile{
+            display: block;
+        }
+        .desktop{
+            display: none;
+        }
+    }
+    @media(min-width : 600px){/*600px 부터*/
+        p{
+            background-color: skyblue;
+        }
+        .mobile{
+            display: none;
+        }
+        .desktop{
+            display: block;
+        }
+    }
+</style>
+<img class="desktop" src="./image/hl1.jpg" alt="">
+<p>화면에 어떻게 표시되나요?</p>
+<img class="mobile" src="./image/hl2.jpg" alt="">
