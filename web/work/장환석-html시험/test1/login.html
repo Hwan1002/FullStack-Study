@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <!--form 태그 : input태그에 쓰여있는 value를 submit이 작동했을때 다른페이지로 보낸다. -->
+    <form name="frm" action="next_page.html">
+        <div class="wrap">
+            <div id="div1" class="logo">
+                <img src="img/instalogo.png" alt="LOGO">
+            </div>
+            <div id="div2" class="input">
+                <div class="info">
+                    <input name="id" type="text" placeholder="아이디"><br>
+                    <input name="pw" type="password" placeholder="비밀번호"><br>
+                    <div class="savedId">
+                        <input class="checkbox" id="checkbox" name="chk_save" type="checkbox">
+                        <label for="checkbox">아이디 저장</label>
+                    </div>
+                </div>
+                <div class="f1">
+                    <input type="submit" value="로그인">
+                </div>
+            </div>
+            
+            <div style="clear:both;"></div>
+            
+        </div>
+    </form>
+   
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>library</title>
+    <!--reset-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"/>
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="top">
+        <div class="logo">
+            <img src="img/library.png" alt="도서관">
+        </div>
+    </nav>
+    <form action="">
+        <div class="content">
+            <div class="searchBtn">
+                <input type="button" value="도서검색">
+            </div>
+
+            <div class="table">
+                <div class="searchInput">
+                    <input type="text" placeholder="도서명 검색">
+                    <button>검색</button>
+                </div>
+                <div class="select">
+                    정렬방식
+                    <select name="sort" id="sort">
+                        <option selected disabled>선택하세요</option>
+                        <option>도서명 오름차순</option>
+                        <option>도서명 내림차순</option>
+                        <option></option>
+                    </select>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <p>1</p>
+                            <p>도서명</p>   
+                            <p>대출중</p>
+                            <div class="btn">
+                                <button class="btn_1">보기</button>
+                                <button class="btn_2">대출</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>2</p>
+                            <p>도서명</p>   
+                            <p>대출가능</p>
+                            <div class="btn">
+                                <button class="btn_1">보기</button>
+                                <button class="btn_2">대출</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>3</p>
+                            <p>도서명</p>   
+                            <p>대출가능</p>
+                            <div class="btn">
+                                <button class="btn_1">보기</button>
+                                <button class="btn_2">대출</button>
+                            </div>
+                        </li>
+                        <li>
+                            <p>4</p>
+                            <p>도서명</p>   
+                            <p>대출가능</p>
+                            <div class="btn">
+                                <button class="btn_1">보기</button>
+                                <button class="btn_2">대출</button>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
