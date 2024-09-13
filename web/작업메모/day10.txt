@@ -1,0 +1,73 @@
+// && 연산자를 이용한 조건부 렌더링
+// 첫번째 피연산자의 결과가 true일 경우, <Component />가 렌더링됩니다.
+function WelcomeMessage(props) {
+  return (
+    <div>
+      {props.isLoggedIn && <p>Welcome back!</p>}
+    </div>
+  );
+}
+JSX문법을 사용하기 전에 import React from 'react';를 임포트 
+
+
+
+export
+- 컴포넌트를 다른 파일에서 사용할 수 있도록 내보는데 사용된다.
+export default
+export 함수명 (){} 
+
+받을때는 import {함수명,함수명}  from './파일 위치'
+
+순서
+우리가 작성한 컴포넌트 -> Babel이 순수 자바스크립트로 바꿈 ->React DOM이 index.html로 연결
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+id가 'root'인 태그를 찾아서 리액트 앱의 루트로 만들겠다.
+
+루트: 최상위 요소
+컴포넌트들을 루트 아래로 배치시키겠다 라는 의미.
+
+root.render(
+  //React.StrictMode는
+  //개발 모드에서만 활성화되는 도구로,
+  //애플리케이션의 잠재적인 문제를 식별하고
+  //경고를 제공하여 개발 중에 코드의 품질을 높이는 데 도움을 준다.
+  <React.StrictMode>
+    <App /> // 컴포넌트 위치
+  </React.StrictMode>
+);
+
+--------------------------------------------------------------------------------
+
+
+수정
+
+1. 체크박스에서 체크하거나 체크를 해제하는것이 안된다.
+- item.done 의 값을 true나 false로 바꿔주면 된다.
+- boolean값을 갖는 readOnly라는 useState를 사용해
+  체크박스를 수정 할 수 있도록 해보기
+2. title의 변경
+- 사용자가 아이템의 title부분을 클릭하면 자동으로 수정 가능한 상태가
+  되게끔 만들려고 한다.
+- 사용자가 내용을 수정하고 enter 키를 누르면 수정한 내용을 저장한다.
+
+
+
+
+ // const changeReadOnly = () => {
+    //     setReadOnly(readOnly = true? false: true);
+    // }
+
+
+react-workspace에 work-react-app 이름으로 프로젝트 만들기
+src폴더에 Sol1.js 파일 만들기
+
+
+useEffect (Hook 종류 fetch를 할때 주로 사용) 
+- 컴포넌트가 렌더링을 마친후에 실행이된다
+- 의존성 배열이 비어있는경우 위에서 실행한후
+
+index.js에 있는 
+<React.StrictMode>는 페이지를 렌더링할때 한번 검사를 하고 다시 렌더링을 하기 때문에
+useEffect를 사용하여 콘솔을 찍으면 두번 나온다. 하지만 StrictMode 는 검사 기능이
+중요하기때문에 지우지 않는걸 추천한다.
