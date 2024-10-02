@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.TodoEntity;
-import com.example.demo.perisistence.TodoRepository;
+import com.example.demo.persistence.TodoRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;

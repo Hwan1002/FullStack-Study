@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -93,7 +94,7 @@ public class TodoController {
 			//자바 스트림을 이용해 반환된 엔티티리스트를 TodoDTO객체를 담은 리스트로 반환한다.
 			//response 내보낼때 TodoDTO로 내보내기로 했으니 TodoDTO
 			//entities.stream().map(TodoDTO::new) : TodoEntity 객체들을 TodoDTO 객체들로 변환하는 과정
-			 //.collect(Collectors.toList()): 스트림으로 변환된 객체들을 리스트로 다시 수집한다.
+			//.collect(Collectors.toList()): 스트림으로 변환된 객체들을 리스트로 다시 수집한다.
 			List<TodoDTO> dtos = entities.stream().map(TodoDTO::new).collect(Collectors.toList());
 			
 			//변환된 TodoDTO 객체를 담고있는 리스트를 이용해 ResponseDTO의 data필드에 대입한다.
@@ -152,6 +153,7 @@ public class TodoController {
 	
 	
 	//삭제하기
+	@DeleteMapping
 	public ResponseEntity<?> deleteTodo(@RequestBody TodoDTO dto){
 		
 		try {
