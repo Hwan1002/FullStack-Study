@@ -117,8 +117,33 @@ delete() 메서드 만들기
 표현계층 
 delete()메서드
 
+
+JPA가 메서드의 이름을 읽어서 쿼리문을 생성을 해준다
+findBy : 특정 조건에 맞는 데이터를 조회
+countBy : 특정 조건에 맞는 데이터의 개수를 조회
+deleteBy : 특정 조건에 맞는 데이터를 삭제
+existsBy : 특정 조건에 맞는 데이터가 존재하는지 여부를 확인
+
+메서드명에 다양한 조건자를 함께 사용할 수 있다.
+And : 두 조건을 모두 만족하는 데이터 조회
+Or : 두 조건 중 하나라도 만족하는 데이터 조회
+Between : 두값 사이에 있는 데이터 조회
+Less Than / Greater Than : 특정 값보다 작은 또는 큰 데이터 조회
+Like : 부분 일치 검색
+
+//userName이 "John"인 사람 찾기
+List<User> findByUserName(String name);
+
+- 나이가 30보다 큰 사용자 찾기
+List<User> findByAgeGreaterThan(int age);
+
+- 이름이 'john' 이고 나이가 30인 사용자 찾기
+List<User> findByUsernameAndAgeGreaterThan(String name, int age)
 조회
 GET localhost:9090/todo
+@GetMapping f(){}
+- 전체조회
+- 특정유저가 작성한 내용만 조회
 
 TodoService에 create 함수 만들기 타입이 어떤게 들어올지 모르니
 List에 제네릭 타입을 사용해서 TodoEntity 메서드로 아이디와 userid title
@@ -131,10 +156,6 @@ PUT localhost:9090/todo
 
 삭제
 DELETE localhost:9090/todo
-
-
-
-
 
 
 
