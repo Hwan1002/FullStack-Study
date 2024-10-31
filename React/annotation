@@ -1,1 +1,8 @@
 annotation 종류 및 정리
+
+
+1. @RequestParam
+- GET 으로 요청이 들어오는 것들 위주로 사용
+
+2. @RequestBody
+- POST, PUT 요청이 들어오는 것들 위주로 사용
