@@ -17,7 +17,11 @@
   처리할 수 있어야 한다.
 
 3. @Repository
-
+- DB에 저장하기 위해 만드는 클래스
+- extends JPArepositiory를 하게되면 메서드를 만들지 않아도
+  findAll, findById, save(), deleteById 등의 기본메서드를 자동으로 사용이 가능하다.
+- 단, findById 같은 경우 null값이 들어갈 수 있기 때문에
+  Optional을 항상 같이 사용해야 한다.
 
 4. @RequestParam
 - GET 으로 요청이 들어오는 것들 위주로 사용
