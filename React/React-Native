@@ -1,1 +1,5 @@
 ※React Native 문법 및 함수 정리
+
+1. <View>
+ㄴ HTML에서의 DIV 같은 태그, TEXT등의 태그를 사용하려면 반드시 View를 
+   사용하여 묶어줘야 한다.
