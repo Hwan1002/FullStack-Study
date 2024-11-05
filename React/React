@@ -1,8 +1,19 @@
-※ React Hook의 종류
+※ React Hook의 종류 ※
+
 1. <useState>
 ㄴ setState 기능에 prev를 넣어 전 state 값을 활용할 수 있다.
-ex) setState(prev = prev +1) 
 
+ex) setState(prev = prev +1) 
+ㄴ setter함수 (setState)는 비동기로 진행하기 때문에
+   여러번 호출할 경우 반영이 잘 안될 수 있다.
+ex) setter(prev => 이전상태를 어떻게 바꿀것인지 정의)
+
+<왜 State로 상태 관리를 해야할까?>
+
+1. 불변성을 통한 상태관리
+2. 참조비교를 이용한 변경감지
+ㄴ 리액트는 얕은 비교를 사용해 이전 상태와 새로운 상태를 비교한다.
+ㄴ 객체의 참조를 비교하는 방식으로 성능이 뛰어나고 불필요한 렌더링
 
 2. <useEffect>
 ㄴ 렌더링이 될때 실행해야 하는 함수를 안에 정의 할 수 있다.
