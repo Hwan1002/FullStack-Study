@@ -27,6 +27,19 @@ onPress = {() => {setCount +1}}
 ㄴ 클릭 이벤트가 발생할 때 가지 setCount를 실행 하지 않고 기다릴 수 있다.
 
 
+<스크롤 위치 알아내는법>
+Hook을 만들어 그안에 스크롤 기능을 정의한다.
+
+* 스크롤 위치를 저장하는 state
+const [scrollPostion, setScrollPostion] = useState(0);
+
+* 스크롤 위치를 얻어와서 state에 저장할 함수
+- e.nativeEvent.contentOffset.y : y 방향 스크롤 위치
+const handleScroll = (e) => {
+   setScrollPosition(e.nativeEvent.contentOffset.y)
+} 
+* 밖에서 이 훅을 쓸때 반환 받을 스크롤 위치와 함수
+return {scrollPosition, handleScroll};
 
 -------------------------------------------------------------------------
 <클린업 함수>
