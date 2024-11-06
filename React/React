@@ -35,7 +35,7 @@ ex) useEffect(()=>{})         -> 매 렌더링마다 재실행
 !!useEffect의 첫번째 요소인 함수에 비동기 (async) 함수가 오면 안되는 이유!!
 
 1. useEffect 자체가 비동기 (async) 동작을 직접적으로 지원을 안함
-2. useEffect의 반환값은 반드시 클린업 함수 또는 undefined여야 한다.
+2. useEffect의 첫번째 인자 반환값은 반드시 클린업 함수 또는 undefined여야 한다.
    비동기 (async) 함수를 사용하면 반환값이 promise가 된다.
 3. 비동기(async) 흐름으로 인한 예기치 않은 동작
 - useEffect 내부에서 비동기 처리를 직접적으로 작성하면, 이 비동기 (async) 함수가
