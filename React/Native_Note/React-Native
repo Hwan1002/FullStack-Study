@@ -15,8 +15,6 @@ renderItem : 각 아이템을 어떻게 렌더링 할지 정의하는 함수
 keyExtractor : 각 아이템을 고유한 키 값을 지정하는 속성
 
 
-
-
 ※함수--------------------------
 
 <onPress>
@@ -61,5 +59,73 @@ useEffect(()=>{
    console.log()
    return () => {} : 이 부분이 클린업 함수
 },[])
+
+
+-----------------------------------------------------------------------
+
+<Navigation>
+
+   - 화면을 쌓아가면서 이동하는 방식
+   - 지원하는 네비게이션 종류 Stack,Tab,Drawer 3 종류가 있다.
+
+<구조>
+
+   - NavigationContainer 컴포넌트
+   - Navigator 컴포넌트
+   - Screen 컴포넌트
+
+<순서>
+
+   1. 화면을 구성할 컴포넌트를 만든다.
+   
+   2. Navigation을 만들고 Screen 컴포넌트를 만든다.
+   
+   3. 각각의 Screen 컴포넌트에 우리가 만든 화면 컴포넌트를 할당한다.
+   
+   4. NavigationContainer 컴포넌트로 Navigation 컴포넌트를 감싼다.
+
+<예시>
+<Stack.Navigator initialRoutName="Home">
+   <Stack.Screen name="List" component={List}/>
+   <Stack.Screen name="Home" component={Home}/>
+   <Stack.Screen name="Item" component={Item}/>
+</Stack.Navigator>
+   - initialRoutName 에 정의한 이름이 가장 먼저 화면에 표출된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
