@@ -27,3 +27,5 @@
 
 ● npm install @react-navigation/bottom-tabs@6.5.20
 - 탭을 누르면 버튼과 연결된 화면으로 이동하는 방식으로 동작
+
+-buildLink is not function
