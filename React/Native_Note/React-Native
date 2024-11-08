@@ -74,6 +74,18 @@ useEffect(()=>{
    - Navigator 컴포넌트
    - Screen 컴포넌트
 
+<스타일 주기>
+
+   1. Navigator에 스타일 주기 -> 하위 스크린에도 다 적용
+      - <Stack.Navigator initialRoutName="Home" screenOptions={{옵션}}>
+  
+   2. Screen 컴포넌트에 스타일 주기 -> 해당 스크린에만 적용
+      - <Stack.Screen name="List" component={List} options={{옵션}}/>
+
+   3. 화면으로 사용되는 컴포넌트에서 navigation 객체를 사용하여 스타일 주기 -> 해당 스크린에만 적용
+      - const Item = ({navigation}) => {
+         navigation.setOptions({옵션})
+      }
 <순서>
 
    1. 화면을 구성할 컴포넌트를 만든다.
@@ -85,12 +97,14 @@ useEffect(()=>{
    4. NavigationContainer 컴포넌트로 Navigation 컴포넌트를 감싼다.
 
 <예시>
-<Stack.Navigator initialRoutName="Home">
-   <Stack.Screen name="List" component={List}/>
-   <Stack.Screen name="Home" component={Home}/>
-   <Stack.Screen name="Item" component={Item}/>
-</Stack.Navigator>
-   - initialRoutName 에 정의한 이름이 가장 먼저 화면에 표출된다.
+
+   <Stack.Navigator initialRoutName="Home">
+      <Stack.Screen name="List" component={List}/>
+      <Stack.Screen name="Home" component={Home}/>
+      <Stack.Screen name="Item" component={Item}/>
+   </Stack.Navigator>
+  
+- initialRoutName 에 정의한 이름이 가장 먼저 화면에 표출된다.
 
 
 
