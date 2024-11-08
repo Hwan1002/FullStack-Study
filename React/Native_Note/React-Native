@@ -74,63 +74,72 @@ useEffect(()=>{
 
 -----------------------------------------------------------------------
 
-<Navigation>
-
-   - 화면을 쌓아가면서 이동하는 방식
-   - 지원하는 네비게이션 종류 Stack,Tab,Drawer 3 종류가 있다.
-
-<구조>
-
-   - NavigationContainer 컴포넌트
-   - Navigator 컴포넌트
-   - Screen 컴포넌트
-
-<스타일 주기>
-
-   1. Navigator에 스타일 주기 -> 하위 스크린에도 다 적용
-      - <Stack.Navigator initialRoutName="Home" screenOptions={{옵션}}>
-  
-   2. Screen 컴포넌트에 스타일 주기 -> 해당 스크린에만 적용
-      - <Stack.Screen name="List" component={List} options={{옵션}}/>
-
-   3. 화면으로 사용되는 컴포넌트 안에서 navigation 객체를 사용하여 스타일 주기 -> 해당 스크린에만 적용
-      - const Item = ({navigation}) => {
-         navigation.setOptions({옵션})
-      }
-
-<순서>
-
-   1. 화면을 구성할 컴포넌트를 만든다.
+   <Navigation>
    
-   2. Navigation을 만들고 Screen 컴포넌트를 만든다.
+      - 화면을 쌓아가면서 이동하는 방식
+      - 지원하는 네비게이션 종류 Stack,Tab,Drawer 3 종류가 있다.
    
-   3. 각각의 Screen 컴포넌트에 우리가 만든 화면 컴포넌트를 할당한다.
+   <구조>
    
-   4. NavigationContainer 컴포넌트로 Navigation 컴포넌트를 감싼다.
+      - NavigationContainer 컴포넌트
+      - Navigator 컴포넌트
+      - Screen 컴포넌트
 
-<예시>
+   <스타일 주기>
+   
+      1. Navigator에 스타일 주기 -> 하위 스크린에도 다 적용
+         - <Stack.Navigator initialRoutName="Home" screenOptions={{옵션}}>
+     
+      2. Screen 컴포넌트에 스타일 주기 -> 해당 스크린에만 적용
+         - <Stack.Screen name="List" component={List} options={{옵션}}/>
+   
+      3. 화면으로 사용되는 컴포넌트 안에서 navigation 객체를 사용하여 스타일 주기 -> 해당 스크린에만 적용
+         - const Item = ({navigation}) => {
+            navigation.setOptions({옵션})
+         }
 
-   <Stack.Navigator initialRoutName="Home">
-      <Stack.Screen name="List" component={List}/>
-      <Stack.Screen name="Home" component={Home}/>
-      <Stack.Screen name="Item" component={Item}/>
-   </Stack.Navigator>
-  
-- initialRoutName 에 정의한 이름이 가장 먼저 화면에 표출된다.
+   <순서>
+   
+      1. 화면을 구성할 컴포넌트를 만든다.
+      
+      2. Navigation을 만들고 Screen 컴포넌트를 만든다.
+      
+      3. 각각의 Screen 컴포넌트에 우리가 만든 화면 컴포넌트를 할당한다.
+      
+      4. NavigationContainer 컴포넌트로 Navigation 컴포넌트를 감싼다.
+   
+   <예시>
+   
+      <Stack.Navigator initialRoutName="Home">
+         <Stack.Screen name="List" component={List}/>
+         <Stack.Screen name="Home" component={Home}/>
+         <Stack.Screen name="Item" component={Item}/>
+      </Stack.Navigator>
+     
+   - initialRoutName 에 정의한 이름이 가장 먼저 화면에 표출된다.
 
 
-<헤더 수정>
+   <헤더 수정>
+   
+   headerTitle : 헤더의 글씨 수정
+   headerStyle : 헤더의 배경색 수정
+   headerTitleStyle : 헤더와 타이틀 컴포넌트의 스타일을 수정
+   headerTitleAlign : 'center'
+   ㄴ IOS는 center 기본값, android는 left가 기본값
+   headerBackTitleVisible : 뒤로가기 버튼의 글씨를 표시함 (true,false)
+   headerBackTitle : 뒤로가기 버튼의 내용 설정
+   headerTintColor : 뒤로가기 버튼이나 헤더 텍스트의 색상 설정 
+   
+   
+   <헤더 감추기>
 
-headerTitle : 헤더의 글씨 수정
-headerStyle : 헤더의 배경색 수정
-headerTitleStyle : 헤더와 타이틀 컴포넌트의 스타일을 수정
-headerTitleAlign : 'center'
-ㄴ IOS는 center 기본값, android는 left가 기본값
-headerBackTitleVisible : 뒤로가기 버튼의 글씨를 표시함 (true,false)
-headerBackTitle : 뒤로가기 버튼의 내용 설정
-headerTintColor : 뒤로가기 버튼이나 헤더 텍스트의 색상 설정 
-
-
+   headerMode : Navigator에서 모든 화면에 헤더가 표시되는 방식을 설정
+   ㄴ screen : 각 화면마다 개별적으로 헤더가 나타난다.
+   ㄴ float : 헤더가 모든 화면을 관통하여 부드럽게 애니메이션 되며 화면 전환시 부드럽다.
+   ㄴ none : 헤더를 표시하지 않는다. 모든 화면에서 헤더가 사라진다.
+   
+   headerShow :  각 screen에 대해 헤더를 개별적으로 표시할지 여부 설정 옵션
+   <Stack.Screen name="Home" componetn={Home} options={{headerShown:false}}>
 
 
 
