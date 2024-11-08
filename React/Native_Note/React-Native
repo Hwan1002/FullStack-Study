@@ -86,6 +86,7 @@ useEffect(()=>{
       - const Item = ({navigation}) => {
          navigation.setOptions({옵션})
       }
+
 <순서>
 
    1. 화면을 구성할 컴포넌트를 만든다.
