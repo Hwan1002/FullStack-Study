@@ -16,13 +16,14 @@
 - 앱에서 화면 이동과 관련된 자원을 더 효율적으로 관리해서 화면 전환을
   더욱 매끄럽게 해주는 라이브러리.
 - react-navigation의 Stack Navigator와 함꼐 사용할 때 성능 향상 효과가 크다.
+
 ● react-native-safe-area-context
 
 - 아이폰X 이후 기기의 상단에 노치나 인디케이터 등을 고려해서 레이아웃을
   안전하게 조정하는 라이브러리.
 
 ● react-native-community/masked-view
-- 뷰에 마스크(mask)를 씌울 수 있도록 해주는 라이브러리
+- 특정 영역을 가리거나 뷰에 마스크(mask)를 씌울 수 있도록 해주는 라이브러리
   네비게이션과 함께 사용해서 전환 효과를 더 자연스럽게 만들 때 유용하다.
 
 ● npm install @react-navigation/bottom-tabs@6.5.20
