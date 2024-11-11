@@ -15,7 +15,7 @@
 
 - 앱에서 화면 이동과 관련된 자원을 더 효율적으로 관리해서 화면 전환을
   더욱 매끄럽게 해주는 라이브러리.
-
+- react-navigation의 Stack Navigator와 함꼐 사용할 때 성능 향상 효과가 크다.
 ● react-native-safe-area-context
 
 - 아이폰X 이후 기기의 상단에 노치나 인디케이터 등을 고려해서 레이아웃을
