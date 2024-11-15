@@ -1,8 +1,10 @@
 ※ React Hook의 종류 ※
 
    <useState>
+   사용예:
+   const [state, setState] = useState();
    ㄴ setState 기능에 prev를 넣어 전 state 값을 활용할 수 있다.
-
+   
 ex) setState(prev = prev +1) 
 ㄴ setter함수 (setState)는 비동기로 진행하기 때문에
    여러번 호출할 경우 반영이 잘 안될 수 있다.
